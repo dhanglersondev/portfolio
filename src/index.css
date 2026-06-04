@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000e7;
+  color: #fff;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
