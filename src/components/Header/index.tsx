@@ -1,11 +1,15 @@
 import logo from '../../assets/images/logo.png'
 
 const navigation = [
-  { name: 'Dashboard', href: '#' },
-  { name: 'Sobre', href: '#' },
+  { name: 'Dashboard', href: '#hero', sectionId: 'hero' },
+  { name: 'Sobre', href: '#about', sectionId: 'about' },
   { name: 'Projetos', href: '#' },
   { name: 'Contato', href: '#' },
-]
+] as const
+
+function scrollToSection(sectionId: string) {
+  document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+}
 
 export function Header() {
   return (
@@ -27,6 +31,12 @@ export function Header() {
               key={item.name}
               href={item.href}
               className="text-md lg:text-xl hover:text-blue-400 transition-all"
+              onClick={(e) => {
+                if ('sectionId' in item) {
+                  e.preventDefault()
+                  scrollToSection(item.sectionId)
+                }
+              }}
             >
               {item.name}
             </a>

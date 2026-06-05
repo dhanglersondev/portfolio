@@ -21,7 +21,8 @@ export function About() {
 
   return (
     <main
-      className="flex justify-center items-center w-full bg-black px-0 sm:px-4 py-6 sm:py-8 md:py-12"
+      id="about"
+      className="flex justify-center items-center w-full bg-black px-0 sm:px-4 py-6 sm:py-8 md:py-12 scroll-mt-20"
       style={{ minHeight: "100vh" }}
     >
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 sm:gap-6 w-full max-w-4xl items-center justify-center">

@@ -2,7 +2,7 @@ import perfil from "../../assets/images/perfil.png";
 
 export function Hero() {
   return (
-    <main className="flex w-full h-screen items-center justify-center">
+    <main id="hero" className="flex w-full h-screen items-center justify-center scroll-mt-20">
       {/* Aumentando gap para espaçar mais as divs internas */}
       <section className="flex flex-col md:flex-row items-center justify-between gap-16 max-w-3xl w-full">
         <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
